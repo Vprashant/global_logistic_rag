@@ -2,7 +2,7 @@
 
 A production-grade RAG-based AI assistant for 1,000+ supply chain managers to query shipment delays, vendor contracts, and real-time IoT sensor data.
 
-## 🏗️ Architecture Overview
+## Architecture Overview
 
 This solution implements a scalable, secure, and multimodal RAG system with:
 
@@ -12,7 +12,7 @@ This solution implements a scalable, secure, and multimodal RAG system with:
 - **Security & Governance**: PII masking, RBAC, and data lineage tracking
 - **Scalability**: Designed for 1000+ concurrent users with caching and optimization
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 global-logistics-rag/
@@ -101,43 +101,43 @@ global-logistics-rag/
 └── README.md
 ```
 
-## 🚀 Features
+## Features
 
 ### 1. Data Ingestion & Source Diversity
-- ✅ PDF contracts and bills of lading from S3/SharePoint
-- ✅ Shipment logs from SAP/Oracle databases
-- ✅ Real-time IoT streams via Kafka/Flink
-- ✅ External APIs (port congestion, weather forecasts)
+- PDF contracts and bills of lading from S3/SharePoint
+- Shipment logs from SAP/Oracle databases
+- Real-time IoT streams via Kafka/Flink
+- External APIs (port congestion, weather forecasts)
 
 ### 2. Advanced Processing
-- ✅ Context-aware chunking (recursive, semantic, parent-child)
-- ✅ Schema normalization across disparate sources
-- ✅ Multimodal processing (text, tables, images)
-- ✅ Table-aware parsing with Markdown/HTML conversion
+- Context-aware chunking (recursive, semantic, parent-child)
+- Schema normalization across disparate sources
+- Multimodal processing (text, tables, images)
+- Table-aware parsing with Markdown/HTML conversion
 
 ### 3. Data Lineage & Governance
-- ✅ Automatic lineage tracking from source to embedding
-- ✅ Versioned document index for auditability
-- ✅ Metadata-enriched chunks with provenance info
+- Automatic lineage tracking from source to embedding
+- Versioned document index for auditability
+- Metadata-enriched chunks with provenance info
 
 ### 4. Security & Data Masking
-- ✅ PII/PHI masking before vector storage
-- ✅ Role-Based Access Control (RBAC)
-- ✅ Field-level security for sensitive data
+- PII/PHI masking before vector storage
+- Role-Based Access Control (RBAC)
+- Field-level security for sensitive data
 
 ### 5. Scaling for 1000+ Users
-- ✅ Scalable vector database (Pinecone/Milvus/Weaviate)
-- ✅ Hybrid search (BM25 + Semantic)
-- ✅ Redis caching for frequent queries
-- ✅ Async processing and connection pooling
+- Scalable vector database (Pinecone/Milvus/Weaviate)
+- Hybrid search (BM25 + Semantic)
+- Redis caching for frequent queries
+- Async processing and connection pooling
 
 ### 6. Multimodal Processing
-- ✅ Vision-Language Models for image understanding
-- ✅ Cross-modal embeddings (CLIP/ImageBind)
-- ✅ Late interaction models (ColBERT) for precision
-- ✅ Semantic chunking with similarity-based splitting
+- Vision-Language Models for image understanding
+- Cross-modal embeddings (CLIP/ImageBind)
+- Late interaction models (ColBERT) for precision
+- Semantic chunking with similarity-based splitting
 
-## 📋 Prerequisites
+## Prerequisites
 
 - Python 3.10+
 - Docker & Docker Compose
@@ -146,7 +146,7 @@ global-logistics-rag/
 - Vector Database (Pinecone/Milvus/Weaviate)
 - API Keys: OpenAI/Anthropic, AWS, etc.
 
-## 🔧 Installation
+## Installation
 
 ### 1. Clone the repository
 ```bash
@@ -177,7 +177,7 @@ python scripts/setup_vector_db.py
 docker-compose up -d
 ```
 
-## 🎯 Usage
+## Usage
 
 ### Ingestion Pipeline
 
@@ -231,7 +231,7 @@ curl -X POST "http://localhost:8000/api/v1/query" \
   }'
 ```
 
-## 🔐 Security
+## Security
 
 - **Authentication**: JWT-based token authentication
 - **Authorization**: Role-Based Access Control (RBAC)
@@ -239,14 +239,14 @@ curl -X POST "http://localhost:8000/api/v1/query" \
 - **Encryption**: TLS for data in transit, AES-256 for data at rest
 - **Audit Logs**: Complete lineage tracking and access logs
 
-## 📊 Performance
+## Performance
 
 - **Latency**: <200ms for cached queries, <2s for complex searches
 - **Throughput**: 1000+ concurrent users
 - **Scalability**: Horizontal scaling with Kubernetes
 - **Caching**: 70%+ cache hit rate for common queries
 
-## 🧪 Testing
+## Testing
 
 ```bash
 # Run unit tests
@@ -259,14 +259,14 @@ pytest tests/test_integration/
 pytest --cov=ingestion --cov=generation tests/
 ```
 
-## 📈 Monitoring
+## Monitoring
 
 - **Metrics**: Prometheus + Grafana dashboards
 - **Logging**: Centralized logging with ELK stack
 - **Tracing**: OpenTelemetry for distributed tracing
 - **Lineage**: Full data provenance tracking
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 - **Vector Database**: Pinecone / Milvus / Weaviate
 - **Embeddings**: OpenAI text-embedding-3-large, CLIP (images)
@@ -278,14 +278,8 @@ pytest --cov=ingestion --cov=generation tests/
 - **Message Queue**: Apache Kafka
 - **Monitoring**: Prometheus, Grafana, ELK
 
-## 🤝 Contributing
+##Contributing
 
 Contributions are welcome! Please read our contributing guidelines.
 
-## 📄 License
 
-MIT License - see LICENSE file for details
-
-## 📧 Contact
-
-For questions or support, please contact the development team.
