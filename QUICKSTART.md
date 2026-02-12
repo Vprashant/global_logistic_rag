@@ -2,7 +2,7 @@
 
 Get the Global Logistics Intelligence Hub up and running in 5 minutes!
 
-## 🚀 Quick Setup
+## Quick Setup
 
 ### Prerequisites
 - Docker & Docker Compose
@@ -55,14 +55,14 @@ curl -X POST http://localhost:8000/api/v1/query \
   }'
 ```
 
-## 📊 Access Dashboards
+## Access Dashboards
 
 - **API Documentation**: http://localhost:8000/docs
 - **Grafana Monitoring**: http://localhost:3000 (admin/admin)
 - **Milvus Dashboard**: http://localhost:9091
 - **MinIO Console**: http://localhost:9001 (minioadmin/minioadmin)
 
-## 🔄 Data Ingestion
+## Data Ingestion
 
 ### Upload a Document
 
@@ -93,7 +93,7 @@ pipeline.ingest_database_records(
 )
 ```
 
-## 🧪 Sample Queries
+## Sample Queries
 
 Once data is ingested, try these queries:
 
@@ -117,7 +117,7 @@ curl -X POST http://localhost:8000/api/v1/query \
   -d '{"query": "Find all active vendor contracts"}'
 ```
 
-## 📝 Key Features Demo
+## Key Features Demo
 
 ### 1. Multimodal Search (Text + Images)
 
@@ -175,7 +175,7 @@ results = retriever.search(
 )
 ```
 
-## 🛠️ Development Mode
+## Development Mode
 
 For local development without Docker:
 
@@ -194,7 +194,7 @@ uvicorn api.main:app --reload --port 8000
 python -m ingestion.pipeline
 ```
 
-## 🔍 Monitoring
+## Monitoring
 
 ### View Logs
 
@@ -222,7 +222,7 @@ curl http://localhost:8000/api/v1/stats
 curl http://localhost:9090/metrics
 ```
 
-## 🛑 Stop Services
+## Stop Services
 
 ```bash
 # Stop all services
@@ -232,14 +232,14 @@ docker-compose down
 docker-compose down -v
 ```
 
-## 📚 Next Steps
+## Next Steps
 
 1. **Load Sample Data**: See [SETUP.md](SETUP.md) for data loading examples
 2. **Configure Vector DB**: Set up Pinecone or use local Milvus
 3. **Set up Authentication**: Implement JWT token generation
 4. **Deploy to Production**: Follow deployment guide in [SETUP.md](SETUP.md)
 
-## 🆘 Troubleshooting
+## Troubleshooting
 
 ### Services won't start?
 ```bash
@@ -274,19 +274,16 @@ docker-compose exec postgres pg_isready
 docker-compose exec redis redis-cli ping
 ```
 
-## 💡 Tips
+## Tips
 
 1. **First time?** Start with the interactive docs at http://localhost:8000/docs
 2. **Need data?** Use the sample data loading script
 3. **Testing?** Use the mock endpoints that don't require real data
 4. **Production?** Review security settings in [SETUP.md](SETUP.md)
 
-## 📞 Support
+## Support
 
 - **Documentation**: See [README.md](README.md) and [SETUP.md](SETUP.md)
 - **Issues**: Open a GitHub issue
 - **Questions**: Check existing issues or discussions
 
----
-
-**Ready to process 1000+ logistics documents?** Let's go! 🚢📦
